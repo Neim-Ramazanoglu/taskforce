@@ -203,7 +203,7 @@ footer a:hover {
   font-weight: 400;
   padding: 5px 6.7px;
   text-decoration: none;
-  /* color: black; */
+  color: black; 
 }
 
 .nav a:hover {
