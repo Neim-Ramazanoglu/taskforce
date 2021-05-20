@@ -20,138 +20,197 @@
 }
 
 .container {
+  display: block;
+  margin: 0px auto;
+  margin-top: 50px;
   text-align: center;
-  margin: 100px;
 }
 
 .search-area {
-  background: #fff;
-  display: flex;
-  border: 1px solid #dfe1e5;
-  box-shadow: none;
-  z-index: 3;
-  height: 44px;
-  margin: 0 auto;
-  margin-top: -77px;
-  width: 582px;
+  width: 480px;
+  margin: 0px auto;
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  
 }
 
-.search-area:hover {
-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
-}
-
-.search {
-  flex: 1;
-  display: flex;
-  padding: 5px 8px 0 16px;
-  padding-left: 14px;
-}
 
 .search-img {
   display: flex;
   align-items: center;
-  padding-right: 13px;
-  margin-top: -5px;
+  margin-top: -60px;
 }
 
 .search-img span {
   color: #9aa0a6;
   height: 20px;
   width: 20px;
-  margin-top: 0px;
+  margin-top: -50px;
   display: inline-block;
   fill: currentColor;
   line-height: 24px;
   position: relative;
+  margin-left: 5px;
 }
 
-.input-enter {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
+/* Voice search ikonu eklendi  */
+.vs-icon {
+  width: 24px;
+  position: absolute;
+  top: 12px;
+  right: -40px;
+
 }
 
-.input-area {
-  color: transparent;
-  flex: 100%;
-  white-space: pre;
-  font: 16px arial, sans-serif;
-  line-height: 34px;
-  height: 34px !important;
+
+
+.search-area .search-input {
   display: block;
-}
-
-.input {
-  margin: 0;
-  padding: 0;
+  border: 1px solid #ddd;
   color: rgba(0, 0, 0, 0.87);
-  word-wrap: break-word;
-  outline: none;
-  display: flex;
-  flex: 100%;
-  margin-top: -68px;
-  font: 16px arial, sans-serif;
-  line-height: 34px;
-  height: 34px !important;
-  text-rendering: auto;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  text-align: start;
-  appearance: textfield;
-  cursor: text;
-}
-
-.googlesearch {
-  margin: 11px 4px;
-  padding: 0 16px;
-  line-height: 27px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-}
-
-.feelinglucky {
-  padding: 0 16px;
-  line-height: 27px;
-  min-width: 54px;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-}
-
-.footer {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #dfe1e5;
-  border-top: 1px solid #dadce0;
-  position: fixed;
-  bottom: 0;
+  font-size: 16px;
+  padding: 13px;
+  padding-left: 45px;
+  border-radius: 25px;
   width: 100%;
-  margin-left: -8px;
-  line-height: 10px;
+  transition: box-shadow 100ms;
+  outline: none;
+
 }
 
-.footerli {
-  float: left;
+.search-area .search-input:hover {
+  border: 1px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05), 
+              0 0 2px rgba(0, 0, 0, 0.05),
+              0 0 3px rgba(0, 0, 0, 0.05), 
+              0 0 4px rgba(0, 0, 0, 0.05), 
+              0 0 5px rgba(0, 0, 0, 0.05), 
+              0 0 4px rgba(0, 0, 0, 0.05), 
+              0 0 5px rgba(0, 0, 0, 0.05)
 }
 
-.footerli a {
-  display: block;
-  color: #70757a;
+/* Search butonları güncellemesi  */
+.searchbutton {
+ border:1px #f2f2f2;
+ padding:  9px 15px;
+ color: #5f6368;
+ font-size: 14px;
+ border-radius: 4px;
+ display: inline-block;
+ margin-right: 10px;
+ margin-top: 28px;
+ outline: none;
+ cursor: pointer;
+ transition: border-color 100ms;
+ height: 36px;
+ font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .searchbutton:hover{
+   border: 1px solid #aaa;
+ }
+
+ /* Dil seçeneği için style eklendi  */
+
+.language {
+  margin-top: 80px;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-family: arial, sans-serif;
-  font-size: 14px;
-  margin-left: 14px;
-  margin-right: -20px;
+  font-size: 13px;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-.footerli a:hover {
+.language a {
+  margin-left:5px;
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.language a:hover {
   text-decoration: underline;
+}
+
+
+
+/* Footer/alt navbar için gerekli olan eklemeler yapıldı */
+
+footer {
+  background: #f2f2f2;
+  margin-top: 170px;
+}
+
+footer h4 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 15px;
+  line-height: 39.5px;
+  font-weight: 400;
+  padding-left: 29px;
+  border:1px solid #eee;
+}
+
+footer a {
+  color: #5f6368;
+  display: inline-block;
+  padding: 12px 11.3px;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  border-top:1px solid #ddd;
+  display:flex;
+}
+
+.link-1 {
+  padding-left: 18.7px;
+  flex: 1;
+}
+
+.link-2 {
+  padding-right: 18.7px;
+
+}
+/* Fotoğraf yuvarlak yapıldı */
+#jpegcircle {
+    border-radius:100px;
+    height: 40px;
+    width: 40px;
+    
+}
+
+
+/* Üstteki alan için gerekli olan styles */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav a {
+  font-size: 14px;
+  display: inline-block;
+  line-height: 12px;
+  font-weight: 400;
+  padding: 5px 6.7px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  opacity: .80;
+}
+
+.nav img:hover {
+  opacity: .8;
 }
